@@ -27,8 +27,12 @@ paths:
       description: "取得所有 TODO"
       tags: 
         - todo
-      security:
-        - BearerAuth: []
+      parameters:
+        - in: query
+          name: checked
+          schema:
+            type: boolean
+          description: "過濾是否完成"
       responses:
         '200':
           description: ""
@@ -38,6 +42,66 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TODO'
+    post:
+      description: "新增 TODO"
+      tags: 
+        - todo
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: ""
+  /api/todos/{todoId}:
+    get:
+      description: "取得 TODO"
+      tags: 
+        - todo
+      parameters:
+        - in: path
+          name: todoId
+          schema:
+            type: integer
+          required: true
+          description: TODO ID
+      responses:
+        '200':
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TODO'
+    patch:
+      description: "更新 TODO"
+      tags: 
+        - todo
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: path
+          name: todoId
+          schema:
+            type: integer
+          required: true
+          description: TODO ID
+      responses:
+        '200':
+          description: ""
+    delete:
+      description: "刪除 TODO"
+      tags: 
+        - todo
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: path
+          name: todoId
+          schema:
+            type: integer
+          required: true
+          description: TODO ID
+      responses:
+        '204':
+          description: ""
 components:
   schemas:
     TODO:
