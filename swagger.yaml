@@ -11,6 +11,13 @@ info:
   license:
     name: MIT
     url: http://opensource.org/licenses/MIT
+servers: 
+  - url: https://development.gigantic-server.com/v1
+    description: Development server
+  - url: https://staging.gigantic-server.com/v1
+    description: Staging server
+  - url: https://api.gigantic-server.com/v1
+    description: Production server
 tags: 
   - name: todo
     description: todo 相關操作
