@@ -20,6 +20,8 @@ paths:
       description: "取得所有 TODO"
       tags: 
         - todo
+      security:
+        - BearerAuth: []
       responses:
         '200':
           description: ""
@@ -40,3 +42,7 @@ components:
           type: string
         checked:
           type: boolean
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
