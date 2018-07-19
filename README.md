@@ -1,1 +1,7 @@
-# modern-web-2018-swagger
+# Modern Web 2018 Swagger
+
+### Step1
+
+* openapi
+* info object
+* paths object
