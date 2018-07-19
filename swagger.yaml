@@ -23,3 +23,20 @@ paths:
       responses:
         '200':
           description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TODO'
+components:
+  schemas:
+    TODO:
+      type: object
+      properties:
+        id:
+          type: integer
+        text:
+          type: string
+        checked:
+          type: boolean
