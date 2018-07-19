@@ -5,3 +5,15 @@
 * openapi
 * info object
 * paths object
+
+### Step2
+
+* add tag
+
+### Step3
+
+* add todo schema
+
+### Step4
+
+* add securitySchemes

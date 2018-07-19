@@ -11,10 +11,15 @@ info:
   license:
     name: MIT
     url: http://opensource.org/licenses/MIT
+tags: 
+  - name: todo
+    description: todo 相關操作
 paths:
   /api/todos:
     get:
       description: "取得所有 TODO"
+      tags: 
+        - todo
       responses:
         '200':
           description: ""
